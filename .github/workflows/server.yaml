@@ -1,0 +1,21 @@
+name: ALPHA
+'on':
+  push:
+    branches:
+      - server
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/amandaa00/test-atc:latest
+    steps:
+      - name: Cache files
+        id: cache-files
+        uses: actions/cache@v3
+        with:
+          path: /app
+          key: ${{ github.sha }}
+      - name: Run script
+        run: |
+          cd /app
+          python3 main.py
