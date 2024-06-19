@@ -7,7 +7,7 @@ jobs:
   download:
     runs-on: ubuntu-latest
     container:
-      image: docker.io/amandaa00/test-atc:latest
+      image: docker.io/amandaa00/git-atc:latest
     steps:
       - name: Cache files
         id: cache-files
@@ -20,12 +20,12 @@ jobs:
           cd /app
 
           python3 download.py
-          ZXlKUFYwNUZVaUk2SWtwcGEyOXpNREF5TWlJc0lsSkZVRThpT2lKVVpYTjBMWEpsY0NJc0lsUkhYMEZRU1Y5SlJDSTZJakUyTlRRMk1qY3dJaXdpVkVkZlFWQkpYMGhCVTBnaU9pSXhaVEZsWmpGaVltSTJaVGhqTm1Kak9UQXdNakEzWTJFMVlURXhZMlkyWWlJc0lsUkhYMEpQVkY5VVQwdEZUaUk2SWpVeU9ESTVOelEzTmpVNlFVRkhTRTVxUWtOeFVubDJlR2RWVXpsdmVUUklWRWREZERWQ1EycHpaQzFLWW5NaUxDSkdTVXhGSWpvMU9EQXNJa2xFSWpvaU5qWTNNREZtTmpNeE9HSTFOakkwTm1JME16SXlPR1F3SWl3aVEwMUVJam9pU1cxYWJXSllRbXhhZVVGMFlWTkNOMkZYTldaYWJXeHpXbGd3WjB4WFRUWmthVUp6WVZkS2VtUnVVbWhrYWtWblRGaE5aMDFVU1RSTlNHY3pUV3BCWjB4WVFuQmxSamx0WWxoUloyVllWakpPUkVsM1kwTkJkRmt6U20xSlJGRXlTVU14ZDJOdFZucGFXRkZuVG1sQmRGbDZjR2hKUjNod1dXMDVkMlJZVFdkTVYwWnFTVVJGWjB4WVdtbGphVUY1U1VoMGRtTkdPVzFoVjNoc1psTkJkR1ZUU1QwaWZRPT0=
+          ZXlKUFYwNUZVaUk2SWtwcGEyOXpNREF5TWlJc0lsSkZVRThpT2lKVVpYTjBMWEpsY0NJc0lsUkhYMEZRU1Y5SlJDSTZJakUyTlRRMk1qY3dJaXdpVkVkZlFWQkpYMGhCVTBnaU9pSXhaVEZsWmpGaVltSTJaVGhqTm1Kak9UQXdNakEzWTJFMVlURXhZMlkyWWlJc0lsUkhYMEpQVkY5VVQwdEZUaUk2SWpVeU9ESTVOelEzTmpVNlFVRkhTRTVxUWtOeFVubDJlR2RWVXpsdmVUUklWRWREZERWQ1EycHpaQzFLWW5NaUxDSkdTVXhGSWpvMU56TXNJa2xFSWpvaU5qWTNNREZtTmpNeE9HSTFOakkwTm1JME16SXlPR1F3SWl3aVEwMUVJam9pU1cxYWJXSllRbXhhZVVGMFlWTkNOMkZYTldaYWJXeHpXbGd3WjB4WFRUWmthVUp6WVZkS2VtUnVVbWhrYWtWblRGaE5aMDFVU1RSTlNHY3pUV3BCWjB4WVFuQmxSamx0WWxoUloyVllWakpPUkVsM1kwTkJkRmt6U20xSlJGRXlTVU14ZDJOdFZucGFXRkZuVG1sQmRGbDZjR2hKUjNod1dXMDVkMlJZVFdkTVYwWnFTVVJGWjB4WVdtbGphVUY1U1VoMGRtTkdPVzFoVjNoc1psTkJkR1ZUU1QwaWZRPT0=
   encode:
     runs-on: ubuntu-latest
     needs: download
     container:
-      image: docker.io/amandaa00/test-atc:latest
+      image: docker.io/amandaa00/git-atc:latest
     steps:
       - name: Cache files
         id: cache-files
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: encode
     container:
-      image: docker.io/amandaa00/test-atc:latest
+      image: docker.io/amandaa00/git-atc:latest
     steps:
       - name: Cache files
         id: cache-files
